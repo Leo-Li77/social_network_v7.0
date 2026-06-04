@@ -1,6 +1,6 @@
 package posts;
 
-public abstract class LikedPost extends Post { // ← 改为 abstract！
+public abstract class LikedPost extends Post {
 
     private int likes;
 

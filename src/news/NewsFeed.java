@@ -65,7 +65,7 @@ public class NewsFeed {
         }
 
         Post p = posts.get(idx);
-        System.out.print("Enter new author: ");
+        System.out.println("[Enter new author]");
         String author = input.nextLine();
         p.setAuthor(author);
 
