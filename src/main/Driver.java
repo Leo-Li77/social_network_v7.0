@@ -1,7 +1,6 @@
 package main;
 
 import news.NewsFeed;
-
 import java.util.Scanner;
 
 public class Driver {
