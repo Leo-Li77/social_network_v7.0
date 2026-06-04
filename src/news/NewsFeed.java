@@ -18,26 +18,26 @@ public class NewsFeed {
         int type = input.nextInt();
         input.nextLine();
 
-        System.out.print("Enter author: ");
+        System.out.println("[Enter author]");
         String author = input.nextLine();
 
         switch (type) {
             case 1:
-                System.out.print("Enter message: ");
+                System.out.println("[Enter message]");
                 String msg = input.nextLine();
                 posts.add(new MessagePost(author, msg));
                 break;
             case 2:
-                System.out.print("Enter filename: ");
+                System.out.println("[Enter filename]");
                 String fname = input.nextLine();
-                System.out.print("Enter caption: ");
+                System.out.println("[Enter caption]");
                 String cap = input.nextLine();
                 posts.add(new PhotoPost(author, fname, cap));
                 break;
             case 3:
-                System.out.print("Enter event name: ");
+                System.out.println("[Enter event name]");
                 String ename = input.nextLine();
-                System.out.print("Enter event cost: ");
+                System.out.println("[Enter event cost]");
                 double cost = input.nextDouble();
                 input.nextLine();
                 posts.add(new EventPost(author, ename, cost));
@@ -52,9 +52,10 @@ public class NewsFeed {
 
     public boolean updatePost() {
         listPosts();
-        if (posts.isEmpty()) return false;
+        if (posts.isEmpty())
+            return false;
 
-        System.out.print("Enter index to update: ");
+        System.out.println("[Enter index to update]");
         int idx = input.nextInt();
         input.nextLine();
 
@@ -69,15 +70,15 @@ public class NewsFeed {
         p.setAuthor(author);
 
         if (p instanceof MessagePost mp) {
-            System.out.print("Enter new message: ");
+            System.out.println("[Enter new message]");
             mp.setMessage(input.nextLine());
         } else if (p instanceof PhotoPost pp) {
-            System.out.print("Enter new caption: ");
+            System.out.println("[Enter new caption]");
             pp.setCaption(input.nextLine());
         } else if (p instanceof EventPost ep) {
-            System.out.print("Enter new event name: ");
+            System.out.println("[Enter new event name]");
             ep.setEventName(input.nextLine());
-            System.out.print("Enter new cost: ");
+            System.out.print("[Enter new cost]");
             ep.setEventCost(input.nextDouble());
             input.nextLine();
         }
@@ -89,7 +90,7 @@ public class NewsFeed {
         listPosts();
         if (posts.isEmpty()) return false;
 
-        System.out.print("Enter index to delete: ");
+        System.out.println("[Enter index to delete]");
         int idx = input.nextInt();
         input.nextLine();
 
@@ -116,7 +117,7 @@ public class NewsFeed {
         listPosts();
         if (posts.isEmpty()) return;
 
-        System.out.print("Enter post index: ");
+        System.out.println("[Enter post index]");
         int idx = input.nextInt();
         input.nextLine();
 

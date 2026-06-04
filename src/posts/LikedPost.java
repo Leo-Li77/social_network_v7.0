@@ -14,7 +14,8 @@ public abstract class LikedPost extends Post { // ← 改为 abstract！
     }
 
     public void unlikeAPost() {
-        if (likes > 0) likes--;
+        if (likes > 0)
+            likes--;
     }
 
     public int getLikes() {

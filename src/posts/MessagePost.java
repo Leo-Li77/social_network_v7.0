@@ -22,9 +22,12 @@ public class MessagePost extends LikedPost {
     }
 
     public static MessagePost fromFileParts(String author, String[] parts) {
-        if (parts.length < 4) return null;
+        if (parts.length < 4)
+            return null;
+
         MessagePost mp = new MessagePost(author, parts[2]);
         mp.setLikes(Integer.parseInt(parts[3]));
+
         return mp;
     }
 }
