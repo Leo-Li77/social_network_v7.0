@@ -37,13 +37,16 @@ public class Driver {
         System.out.println("-----------------------------");
     }
 
-    // getOption() - Version 1.0
+    // getOption() - Version 2.0
     private int getOption() {
         int option = 0;
-
-        option = input.nextInt();
-        input.nextLine();
-
+        try {
+            option = input.nextInt();
+            input.nextLine();
+        } catch (Exception e) {
+            input.nextLine(); // 清除无效输入
+            return -1;
+        }
         return option;
     }
 
@@ -67,6 +70,6 @@ public class Driver {
             System.out.println("[Enter your option]");
             option = getOption();
         }
-
+        System.out.println("<Bye>");
     }
 }
